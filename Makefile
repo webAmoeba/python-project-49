@@ -17,11 +17,11 @@ package-reinstall:
 	python3 -m pip install --user --force-reinstall dist/*.whl
 
 # local install
-pkg-i-local:
+package-install-local:
 	python3 -m pip install dist/*.whl
 
 # local reinstall
-pkg-rei-local:
+package-reinstall-local:
 	python3 -m pip install --force-reinstall dist/*.whl
 
 # local build and reinstall
