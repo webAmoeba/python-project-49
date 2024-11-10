@@ -1,11 +1,13 @@
 import random
 import prompt
-from brain_games.cli import name
+from brain_games.cli import welcome_user
 
 
 def is_even():
     attempts = 3
+    name = welcome_user()
 
+    print(f"Hello, {name}!")
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
     for _ in range(attempts):

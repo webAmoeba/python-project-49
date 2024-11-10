@@ -1,6 +1,6 @@
 import random
 import prompt
-from brain_games.cli import name
+from brain_games.cli import welcome_user
 
 
 def operate(a, b, operation):
@@ -25,6 +25,9 @@ def get_symbol(operation):
 
 def calc():
     attempts = 3
+    name = welcome_user()
+
+    print(f"Hello, {name}!")
     print('What is the result of the expression?')
 
     for _ in range(attempts):
