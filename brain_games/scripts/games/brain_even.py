@@ -1,23 +1,12 @@
-import random
-import prompt
-from brain_games.cli import welcome_user
+from brain_games.scripts.template import play_game, get_random_number
 
 
 def is_even():
-    attempts = 3
-    name = welcome_user()
+    title = 'Answer "yes" if the number is even, otherwise answer "no".'
+    return play_game(title, generate_question_and_answer)
 
-    print('Answer "yes" if the number is even, otherwise answer "no".')
 
-    for _ in range(attempts):
-        random_number = random.randint(1, 99)
-        result = 'yes' if random_number % 2 == 0 else 'no'
-        print(f"Question: {random_number}")
-        answer = prompt.string("Your answer: ")
-        if answer != result:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'")
-            return
-
-        print('Correct!')
-
-    print(f'Congratulations, {name}!')
+def generate_question_and_answer():
+    random_number = get_random_number()
+    result = 'yes' if random_number % 2 == 0 else 'no'
+    return f"Question: {random_number}", result

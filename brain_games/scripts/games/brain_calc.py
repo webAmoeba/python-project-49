@@ -1,28 +1,15 @@
-import random
-import prompt
-from brain_games.cli import welcome_user
+from brain_games.scripts.template import play_game, get_random_number
 
 
 def calc():
-    attempts = 3
-    name = welcome_user()
+    title = 'What is the result of the expression?'
+    return play_game(title, generate_question_and_answer)
+
+
+def generate_question_and_answer():
+    number1 = get_random_number()
+    number2 = get_random_number()
     operations = '+-*'
-
-    print('What is the result of the expression?')
-
-    for _ in range(attempts):
-        number1 = random.randint(1, 99)
-        number2 = random.randint(1, 99)
-        operation = random.randint(0, operations.__len__() - 1)
-        result = eval(f'{number1} {operations[operation]} {number2}')
-        print(f"Question {number1} {operations[operation]} {number2}")
-        answer = prompt.string("Your answer: ")
-
-        if answer != result.__str__():
-            print(f"'{answer}' is wrong answer ;(."
-                  f" Correct answer was '{result}'")
-            return
-
-        print('Correct!')
-
-    print(f'Congratulations, {name}!')
+    operation = operations[get_random_number(0, operations.__len__() - 1)]
+    result = eval(f'{number1} {operation} {number2}')
+    return f"Question {number1} {operation} {number2}", result.__str__()
