@@ -11,11 +11,11 @@ def is_even():
 
     for _ in range(attempts):
         random_number = random.randint(1, 99)
-        even = 'yes' if random_number % 2 == 0 else 'no'
+        result = 'yes' if random_number % 2 == 0 else 'no'
         print(f"Question: {random_number}")
         answer = prompt.string("Your answer: ")
-        if answer != even:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{even}'")
+        if answer != result:
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'")
             return
 
         print('Correct!')
