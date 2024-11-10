@@ -27,7 +27,6 @@ def calc():
     attempts = 3
     name = welcome_user()
 
-    print(f"Hello, {name}!")
     print('What is the result of the expression?')
 
     for _ in range(attempts):
