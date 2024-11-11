@@ -1,7 +1,7 @@
 from brain_games.scripts.template import play_game, get_random_number
 
 
-def calc():
+def main():
     title = 'What is the result of the expression?'
     return play_game(title, generate_question_and_answer)
 

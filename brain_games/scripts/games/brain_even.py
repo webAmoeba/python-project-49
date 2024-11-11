@@ -1,7 +1,7 @@
 from brain_games.scripts.template import play_game, get_random_number
 
 
-def is_even():
+def main():
     title = 'Answer "yes" if the number is even, otherwise answer "no".'
     return play_game(title, generate_question_and_answer)
 

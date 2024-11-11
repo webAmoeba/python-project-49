@@ -24,8 +24,7 @@ def play_game(title, generate_question_and_answer):
         answer = prompt.string("Your answer: ")
 
         if answer != correct_answer:
-            print(Fore.RED + f"'{answer}' is wrong answer ;(."
-                  f" Correct answer was '{correct_answer}'")
+            print(Fore.RED + f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'\nLet's try again, {name}!")
             return
 
         print(Fore.GREEN + 'Correct!')
