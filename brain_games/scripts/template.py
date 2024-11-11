@@ -1,7 +1,8 @@
 import random
 import prompt
 from brain_games.cli import welcome_user
-
+from colorama import init, Fore, Style
+init(autoreset=True)
 
 MIN = 1
 MAX = 99
@@ -23,10 +24,10 @@ def play_game(title, generate_question_and_answer):
         answer = prompt.string("Your answer: ")
 
         if answer != correct_answer:
-            print(f"'{answer}' is wrong answer ;(."
+            print(Fore.RED + f"'{answer}' is wrong answer ;(."
                   f" Correct answer was '{correct_answer}'")
             return
 
-        print('Correct!')
+        print(Fore.GREEN + 'Correct!')
 
-    print(f'Congratulations, {name}!')
+    print(Fore.CYAN + Style.BRIGHT + f'Congratulations, {name}!')
