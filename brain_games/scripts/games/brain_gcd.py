@@ -14,4 +14,4 @@ def generate_question_and_answer():
     number1 *= result
     number2 *= result
 
-    return f"Question {number1} {number2}", result.__str__()
+    return f"Question: {number1} {number2}", result.__str__()

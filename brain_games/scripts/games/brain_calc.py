@@ -12,4 +12,4 @@ def generate_question_and_answer():
     operations = '+-*'
     operation = operations[get_random_number(0, operations.__len__() - 1)]
     result = eval(f'{number1} {operation} {number2}')
-    return f"Question {number1} {operation} {number2}", result.__str__()
+    return f"Question: {number1} {operation} {number2}", result.__str__()
