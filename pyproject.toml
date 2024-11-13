@@ -8,6 +8,14 @@ packages = [
   { include = "brain_games" },
 ]
 repository = "https://github.com/webAmoeba/python-project-49"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent"
+]
 
 [tool.poetry.dependencies]
 python = "^3.13"
@@ -30,12 +38,3 @@ brain-calc = "brain_games.scripts.games.brain_calc:main"
 brain-gcd = "brain_games.scripts.games.brain_gcd:main"
 brain-progression = "brain_games.scripts.games.brain_progression:main"
 brain-prime = "brain_games.scripts.games.brain_prime:main"
-
-[tool.poetry.classifiers]
-# Classifiers help users find your project by categorizing it
-"Development Status :: 3 - Alpha"
-"Intended Audience :: Developers"
-"License :: OSI Approved :: MIT License"
-"Programming Language :: Python :: 3"
-"Programming Language :: Python :: 3.13"
-"Operating System :: OS Independent"
