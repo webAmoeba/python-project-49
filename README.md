@@ -19,7 +19,7 @@ Welcome to the Brain Games project! This repository contains a collection of fun
 
 To run this project, you need to have the following software installed:
 
-- Python 3.13.0
+- Python 3.12.0
 - Poetry 1.8.2
 - Pip 24.3.1
 
