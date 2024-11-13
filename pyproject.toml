@@ -2,7 +2,7 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = "A collection of fun and challenging games to test your mathematical and logical skills."
-authors = ["Valera Galeev. tg: @webAmoeba"]
+authors = ["Valera Galeev <71322091+webAmoeba@users.noreply.github.com>"]
 readme = "README.md"
 packages = [
   { include = "brain_games" },
