@@ -25,11 +25,21 @@ To run this project, you need to have the following software installed:
 
 ## Installation
 
-To set up the project, run the following commands:
+To set up the project, navigate to the project directory and run the following commands:
 
 ```bash
 make build
 make package-install
+```
+
+## Update Your PATH
+
+To add a directory to your PATH environment variable, you can use the following commands (you can replace `.zshrc` with another shell configuration file if you're using a different shell):
+
+```bash
+cd
+echo 'export PATH=$PATH:~/.local/bin' >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ## Running the Game
@@ -48,7 +58,7 @@ brain-prime
 Enjoy the games and challenge your brain!
 
 #### Install & game start
-[![asciicast](https://asciinema.org/a/4mDDefEyzLBWSYJfNECEMtkQK.svg)](https://asciinema.org/a/4mDDefEyzLBWSYJfNECEMtkQK)
+[![asciicast](https://asciinema.org/a/YqUPY3yQ3oYrzhd3NGEbxr4bT.svg)](https://asciinema.org/a/YqUPY3yQ3oYrzhd3NGEbxr4bT)
 
 #### Game of brain-even
 [![asciicast](https://asciinema.org/a/noiSU2WmpwMZaWJFGjetM2yyI.svg)](https://asciinema.org/a/noiSU2WmpwMZaWJFGjetM2yyI)
