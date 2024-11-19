@@ -1,9 +1,9 @@
-from brain_games.scripts.template import play_game, get_random_number
+from brain_games.games.template import run_template, get_random_number
 
 
-def main():
+def play():
     title = 'What number is missing in the progression?'
-    return play_game(title, generate_question_and_answer)
+    return run_template(title, generate_question_and_answer)
 
 
 def generate_question_and_answer():
@@ -21,4 +21,4 @@ def generate_question_and_answer():
     arr[empty] = '..'
     question = ' '.join(arr)
 
-    return f"Question: {question}", result.__str__()
+    return question, result.__str__()

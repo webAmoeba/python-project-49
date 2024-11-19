@@ -13,14 +13,14 @@ def get_random_number(a=MIN, b=MAX):
     return random.randint(a, b)
 
 
-def play_game(title, generate_question_and_answer):
+def run_template(title, generate_question_and_answer):
     name = welcome_user()
 
     print(title)
 
     for _ in range(ATTEMPTS):
         question, correct_answer = generate_question_and_answer()
-        print(question)
+        print('Question:', question)
         answer = prompt.string("Your answer: ")
 
         if answer != correct_answer:

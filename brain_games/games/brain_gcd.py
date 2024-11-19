@@ -1,10 +1,10 @@
 import math
-from brain_games.scripts.template import play_game, get_random_number
+from brain_games.games.template import run_template, get_random_number
 
 
-def main():
+def play():
     title = 'Find the greatest common divisor of given numbers.'
-    return play_game(title, generate_question_and_answer)
+    return run_template(title, generate_question_and_answer)
 
 
 def generate_question_and_answer():
@@ -17,4 +17,4 @@ def generate_question_and_answer():
 
     result = math.gcd(number1, number2)
 
-    return f"Question: {number1} {number2}", result.__str__()
+    return f"{number1} {number2}", result.__str__()
